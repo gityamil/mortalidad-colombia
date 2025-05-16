@@ -1,0 +1,102 @@
+# **Informe: Análisis de Mortalidad en Colombia (2019)**  
+
+**Nombre del estudiante:** Ivan calderon, Luis Murcia  
+**Asignatura:** [Aplciaciones I]  
+**Fecha:** [2025-05-17]  
+
+---
+
+## **📌 Introducción**  
+
+### **Descripción del Proyecto**  
+Este proyecto consiste en una **aplicación web interactiva** desarrollada en Python con Dash y Plotly, diseñada para analizar y visualizar datos de mortalidad en Colombia durante el año 2019. La aplicación permite explorar patrones demográficos, regionales y temporales a través de gráficos dinámicos y tablas filtrables.  
+
+### **Objetivos**  
+1. Visualizar la distribución geográfica de la mortalidad por departamento.  
+2. Identificar las principales causas de muerte y su frecuencia.  
+3. Analizar tendencias mensuales y por grupos de edad.  
+4. Comparar diferencias en mortalidad por género y región.  
+
+### **Tecnologías Utilizadas**  
+- **Python**: Lenguaje principal para el procesamiento de datos.  
+- **Dash**: Framework para construir la interfaz web interactiva.  
+- **Plotly**: Librería para generar gráficos dinámicos.  
+- **Pandas**: Manipulación y limpieza de datos.  
+- **AWS Elastic Beanstalk**: Despliegue en la nube (opcional).  
+
+---
+
+## **🛠 Desarrollo**  
+
+### **Funcionamiento General de la Aplicación**  
+La aplicación está estructurada en dos pestañas principales:  
+
+1. **Resumen General**:  
+   - Mapa de muertes por departamento.  
+   - Gráfico de tendencia mensual.  
+   - Top 5 ciudades con más homicidios.  
+   - Top 10 ciudades con menor mortalidad.  
+
+2. **Análisis Detallado**:  
+   - Tabla de las 10 principales causas de muerte.  
+   - Histograma de distribución por edad.  
+   - Gráfico de barras apiladas por género y departamento.  
+
+### **Capturas de Pantalla y Explicación**  
+
+#### **1. Pestaña "Resumen General"**  
+📌 **Mapa de Distribución por Departamento**  
+- **Propósito**: Mostrar concentración geográfica de muertes.  
+- **Interacción**: El usuario puede pasar el cursor para ver cifras exactas por departamento.  
+
+📌 **Gráfico de Líneas (Tendencia Mensual)**  
+- **Propósito**: Identificar meses con mayor mortalidad.  
+
+---
+
+#### **2. Pestaña "Análisis Detallado"**  
+📌 **Tabla de Principales Causas de Muerte**  
+- **Propósito**: Listar las enfermedades/eventos más letales.  
+
+📌 **Histograma de Edades**  
+- **Propósito**: Identificar grupos etarios más vulnerables.  
+
+---
+
+## **📊 Visualización e Interpretación de Datos**  
+
+### **Hallazgos Clave**  
+
+#### **1. Distribución Geográfica**  
+- **Departamentos con mayor mortalidad**: Bogotá, Antioquia y Valle del Cauca.  
+- **Posible causa**: Alta densidad poblacional y problemas de seguridad en zonas urbanas.  
+
+#### **2. Tendencia Mensual**  
+- **Picos en diciembre y junio**: Podrían relacionarse con accidentes de tránsito en festividades.  
+
+#### **3. Principales Causas de Muerte**  
+1. **Enfermedades cardiovasculares** (Código I20-I25).  
+2. **Homicidios** (X95-Y09).  
+3. **Diabetes** (E10-E14).  
+
+#### **4. Diferencias por Género**  
+- **Hombres**: Mayor mortalidad por violencia (75% de los homicidios).  
+- **Mujeres**: Mayor prevalencia de enfermedades crónicas.  
+
+---
+
+## **✅ Conclusiones**  
+
+1. **La mortalidad en Colombia (2019)** está concentrada en zonas urbanas y vinculada a violencia y enfermedades no transmisibles.  
+2. **Dash y Plotly** demostraron ser herramientas eficaces para crear visualizaciones interactivas que facilitan el análisis.  
+3. **Limitaciones**: Los datos dependen de la calidad del registro oficial (posibles subregistros en zonas rurales).  
+4. **Futuras Mejoras**:  
+   - Añadir filtros por año para análisis comparativo.  
+   - Integrar datos socioeconómicos para cruzar variables.  
+
+---
+
+## **🔗 Recursos Adicionales**  
+- [Repositorio del Proyecto](https://github.com/tuusuario/mortalidad-colombia)  
+- [Documentación de Dash](https://dash.plotly.com/)  
+
