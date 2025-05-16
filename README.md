@@ -1,8 +1,8 @@
 # **Informe: Análisis de Mortalidad en Colombia (2019)**  
 
 **Nombre del estudiante:** Ivan calderon, Luis Murcia  
-**Asignatura:** [Aplciaciones I]  
-**Fecha:** [2025-05-17]  
+**Asignatura:** Aplciaciones I  
+**Fecha:** 2025-05-17  
 
 ---
 
@@ -42,7 +42,7 @@ La aplicación está estructurada en dos pestañas principales:
    - Histograma de distribución por edad.  
    - Gráfico de barras apiladas por género y departamento.  
 
-### **Capturas de Pantalla y Explicación**  
+### **Explicación**  
 
 #### **1. Pestaña "Resumen General"**  
 📌 **Mapa de Distribución por Departamento**  
@@ -97,6 +97,6 @@ La aplicación está estructurada en dos pestañas principales:
 ---
 
 ## **🔗 Recursos Adicionales**  
-- [Repositorio del Proyecto](https://github.com/tuusuario/mortalidad-colombia)  
+- [Repositorio del Proyecto](https://github.com/gityamil/mortalidad-colombia)  
 - [Documentación de Dash](https://dash.plotly.com/)  
 
