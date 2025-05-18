@@ -50,24 +50,36 @@ La aplicación está estructurada en dos pestañas principales:
 
  
 📌 **Mapa de Distribución por Departamento**  
-<p align="center">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Logo de GitHub" width="300" />
-</p>
+![Mapa](./images/mapa.png)
+
 - **Propósito**: Mostrar concentración geográfica de muertes.  
 - **Interacción**: El usuario puede pasar el cursor para ver cifras exactas por departamento.  
 
 📌 **Gráfico de Líneas (Tendencia Mensual)**  
+![Mapa](./images/lineas.png)
 - **Propósito**: Identificar meses con mayor mortalidad.  
+
+📌 **Gráfico de barras**  
+![Mapa](./images/barras.png)
+- **Propósito**: Identificar ciudades con mayor mortalidad
+
+📌 **Gráfico circular**  
+![Mapa](./images/torta.png)
+- **Propósito**: Identificar  ciudades con menor mortalidad
 
 ---
 
 #### **2. Pestaña "Análisis Detallado"**  
 📌 **Tabla de Principales Causas de Muerte**  
+![Mapa](./images/tabla.png)
 - **Propósito**: Listar las enfermedades/eventos más letales.  
 
 📌 **Histograma de Edades**  
+![Mapa](./images/histograma.png)grupos
 - **Propósito**: Identificar grupos etarios más vulnerables.  
-
+📌 **Gráfico de barras apiladas**  
+![Mapa](./images/barras_apiladas.png)
+- **Propósito**: Identificar muertes por sexo y departamento
 ---
 
 ## **📊 Visualización e Interpretación de Datos**  
