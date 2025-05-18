@@ -7,9 +7,9 @@ import pandas as pd
 import numpy as np
 
 # Cargar los datos
-df_mortalidad = pd.read_excel('data/mortalidad.xlsx')
-df_causas = pd.read_excel('data/causas.xlsx')
-df_division = pd.read_excel('data/division.xlsx')
+df_mortalidad = pd.read_csv('data/mortalidad.csv', sep=';')
+df_causas = pd.read_csv('data/causas.csv', sep=';')
+df_division = pd.read_csv('data/division.csv', sep=';')
 
 # Filtrar solo datos de 2019
 df_2019 = df_mortalidad[df_mortalidad['AÑO'] == 2019].copy()
@@ -103,22 +103,30 @@ app.layout = dbc.Container([
 )
 def update_mapa(_):
     depto_counts = df_2019.groupby(['COD_DEPARTAMENTO', 'DEPARTAMENTO']).size().reset_index(name='counts')
-    
-    fig = px.choropleth(
-        depto_counts,
-        geojson="https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json",
-        locations='COD_DEPARTAMENTO',
-        color='counts',
-        hover_name='DEPARTAMENTO',
-        hover_data=['counts'],
-        scope='south america',
-        color_continuous_scale='Viridis',
-        labels={'counts': 'Número de muertes'}
-    )
-    
+
+    try:  # Intenta cargar el GeoJSON desde la URL
+        fig = px.choropleth(
+            depto_counts,
+            geojson="https://gist.githubusercontent.com/john-guerra/43c7656821069d00dcbc/raw/be6a6e239cd5b5b803c6e7c2ec405b793a9064dd/Colombia.geo.json",
+            locations='COD_DEPARTAMENTO',
+            featureidkey="properties.DPTO", # Asegúrate de que esta clave coincida con tu GeoJSON
+            color='counts',
+            hover_name='DEPARTAMENTO',
+            hover_data=['counts'],
+            scope='south america',  # Ajusta el alcance si es necesario
+            color_continuous_scale='Viridis',
+            labels={'counts': 'Número de muertes'}
+        )
+    except Exception as e:  # Maneja el error si no se puede cargar el GeoJSON
+        print(f"Error cargando GeoJSON: {e}")
+        fig = go.Figure()  # Crea una figura vacía para evitar errores
+        fig.update_layout(title_text="Error cargando el mapa.")
+        return fig
+
+
     fig.update_geos(fitbounds="locations", visible=False)
     fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, height=400)
-    
+
     return fig
 
 # Gráfico de líneas por mes
@@ -230,7 +238,7 @@ def update_bar_sexo_depto(_):
     )
     
     fig.update_layout(height=500)
-    return fig
 
+    return fig
 if __name__ == '__main__':
-    app.run(debug=True)  # ← NUEVO
+    app.run(host='0.0.0.0', port=8000)  # ¡Puerto 5000 es clave!
