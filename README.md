@@ -1,8 +1,10 @@
 # **Informe: Análisis de Mortalidad en Colombia (2019)**  
 
-**Nombre del estudiante:** Ivan calderon, Luis Murcia  
+**Nombre del estudiante:** Ivan Calderón, Luis Murcia  
 **Asignatura:** Aplciaciones I  
 **Fecha:** 2025-05-17  
+
+- [Enlace Demo](http://54.198.21.249/)  
 
 ---
 
@@ -45,7 +47,12 @@ La aplicación está estructurada en dos pestañas principales:
 ### **Explicación**  
 
 #### **1. Pestaña "Resumen General"**  
+
+ 
 📌 **Mapa de Distribución por Departamento**  
+<p align="center">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Logo de GitHub" width="300" />
+</p>
 - **Propósito**: Mostrar concentración geográfica de muertes.  
 - **Interacción**: El usuario puede pasar el cursor para ver cifras exactas por departamento.  
 
