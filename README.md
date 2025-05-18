@@ -103,7 +103,40 @@ La aplicación está estructurada en dos pestañas principales:
 - **Mujeres**: Mayor prevalencia de enfermedades crónicas.  
 
 ---
+#### ** Despliegue de la Aplicación**  
+- Clonación del repositorio o transferencia de archivos:  
+  ```bash
+  git clone [repositorio] || scp -i key.pem app.zip ubuntu@<IP_PÚBLICA>:/home/ubuntu
+  ```  
+- Configuración de Gunicorn y Nginx:  
+  ```bash
+  gunicorn --bind 0.0.0.0:8000 --timeout 120 app:server
+  ```  
+  - Archivo de configuración de Nginx (`/etc/nginx/sites-available/mortalidad-app`):  
+    ```nginx
+    server {
+        listen 80;
+        server_name <IP_PÚBLICA>;
 
+        location / {
+            proxy_pass http://127.0.0.1:8000;
+            proxy_set_header Host $host;
+        }
+    }
+    ```  
+
+#### **4. Publicación Final**  
+- Habilitar el sitio y reiniciar Nginx:  
+  ```bash
+  sudo ln -s /etc/nginx/sites-available/mortalidad-app /etc/nginx/sites-enabled/
+  sudo systemctl restart nginx
+  ```  
+
+### **Enlace a la Aplicación**  
+🔗 **URL de la aplicación**: [URL Análisis de Mortalidad](http://54.198.21.249/)  
+
+
+---
 ## **✅ Conclusiones**  
 
 1. **La mortalidad en Colombia (2019)** está concentrada en zonas urbanas y vinculada a violencia y enfermedades no transmisibles.  
