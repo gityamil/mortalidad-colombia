@@ -4,7 +4,7 @@
 **Asignatura:** Aplciaciones I  
 **Fecha:** 2025-05-17  
 
-- [Enlace Demo](http://54.198.21.249/)  
+- [Enlace Demo](http://54.90.72.109:8000/)  
 
 ---
 
@@ -133,7 +133,7 @@ La aplicación está estructurada en dos pestañas principales:
   ```  
 
 ### **Enlace a la Aplicación**  
-🔗 **URL de la aplicación**: [URL Análisis de Mortalidad](http://54.198.21.249/)  
+🔗 **URL de la aplicación**: [URL Análisis de Mortalidad](http://54.90.72.109:8000/)  
 
 
 ---
